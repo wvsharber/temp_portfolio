@@ -30,7 +30,8 @@
         <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
       </span>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -55,7 +56,8 @@
         <div class="subheading mb-5">Data Scientist ·
           <a href="mailto:wvsharber@gmail.com">wvsharber@gmail.com</a>
         </div>
-        <p class="lead mb-5">I am a data scientist and plant evolutionary biologist. Feel free to contact me at my email or at my social media linked below!</p>
+        <p class="lead mb-5">I am a data scientist and plant evolutionary biologist. I have led scientific research projects through design, execution, data analysis, and presentation and dissemination for over 10 years. In addition to my academic background, I have experience in teaching and public science communication, and I strive to make my work easily understandable for general audiences and experts alike. I am currently open to data science roles or pro bono projects for businesses in the Seattle area. Feel free to contact me at my email address above or my social media linked below!
+        </p>
         <div class="social-icons">
           <a href="https://www.linkedin.com/in/wvsharber/">
             <i class="fab fa-linkedin-in"></i>
@@ -77,28 +79,74 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="projects">
       <div class="w-100">
-        <h2 class="mb-5">Projects</h2>
+        <h2 class="mb-5">Data Science Projects</h2>
 
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
-            <h3 class="mb-0">Update on Opportunity Youth in South King Co.</h3>
-            <div class="subheading mb-3">Analysis of Public Use Microdata Samples (PUMS) to Track Unemployed, Unenrolled 16-24 Year Olds</div>
+            <h3 class="mb-0">BeatMapSynth</h3>
+            <div class="subheading mb-3">Automatic Song Mapper for the VR Rhythm Game, Beat Saber</div>
             <p>
-              Using 2017 US Census PUMS data, we provide an update to the estimate of "opportunity youth," 16 to 24 year olds who are neither employed nor enrolled in school, in South King Co., Washington. We compare these results to summarized 2014 data published <a href="https://bit.ly/2P2XRF3">here</a>. 
+              Beat Saber is a wildly popular VR rhythm game similar to Dance Dance Revolution or Guitar Hero. While the
+              officially released songs are seen as the gold standard for quality play, the desire for new content
+              outstrips the rate of release of official content. In response, users have developed their own custom
+              content, often hosted on websites such as <a href="https://beatsaver.com/">Beat Saver</a>. This custom
+              content varies greatly in quality, and furthermore, is difficult for an ameteur user to create on their
+              own. I created BeatMapSynth in an effort to enable users to quickly and reliably create their own custom
+              content using generative modeling techniques.
             </p>
             <p>
-              We find the total number of opportunity youth in the defined region has decreased since the 2014 data, as well as a decrease in the proportion of opportunity youth. In addition, we report that the proportion of opportunity youth without college experience has increased in comparison to those with some college experience, suggesting that previous opportunity youth were able to find employment because of their college experience. 
+              Using over 8,000 highly-rated, user-made song mappings downloaded and processed with a custom Python
+              script, I trained Hidden Markov Models to produce sequences of block placements that replicate the smooth
+              transitions similar to human-made maps. By adding custom-built programming to the generative model that
+              incorporates analyzed features of the music (e.g., relative loudness and song structure), I was able to
+              recreate the repetition and variation in block appearance rate that are common in human-made maps. These
+              custom maps can be rapidly created, played as-is, or used as the building blocks with manual map editors.
+            </p>
+          </div>
+          <div class="resume-date text-md-right">
+            <a href="https://medium.com/swlh/beatmapsynth-an-automatic-song-mapper-for-beat-saber-aa9e59f093f8"
+              class="text-primary">View Blog Post with Examples</a>
+          </div>
+        </div>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Tanzanian Water Well Functionality</h3>
+            <div class="subheading mb-3">Machine learning to predict functionality of water well pumps for prioritizing repair and maintenance
+            </div>
+            <p>
+              Easy access to clean water is paramount to healthy communities. In order to identify water well pumps that may need updates or repairs, we created a model that predicts pump functionality in communities across Tanzania.
+            </p>
+            <p>
+              Using records for over 50,000 Tanzanian water wells from the agency Taarifa, which aggregates the data from the Tanzania Ministry of Water, and hosted at <a href="https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/page/23/">drivendata.org</a>, we trained four independent classification models: Logistic Regression, K-Nearest Neighbor, Random Forest, and Gradient Boosted Forest. Individually, they performed well, ~80% accuracy, but we implemented a consensus method of the four models using Soft Voting to increase the accuracy to ~82% and diminish the effects of biases in the individual models.
+            </p>
+          </div>
+          <div class="resume-date text-md-right">
+            <a href="jupyter_notebooks/WaterWells.html" class="text-primary">View Jupyter Notebook</a>
+          </div>
+        </div>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Update on Opportunity Youth in South King Co.</h3>
+            <div class="subheading mb-3">Analysis of Public Use Microdata Samples (PUMS) to Track Unemployed, Unenrolled
+              16-24 Year Olds</div>
+            <p>
+              Using 2017 US Census PUMS data, we provided an update to the estimate of "opportunity youth," 16 to 24 year
+              olds who are neither employed nor enrolled in school, in South King Co., Washington. We compared these
+              results to summarized 2014 data published <a href="https://bit.ly/2P2XRF3">here</a>.
+            </p>
+            <p>
+              We found the total number of opportunity youth in the defined region had decreased since the 2014 data, as
+              well as a total decrease in the proportion of opportunity youth in the community. In addition, we reported that the proportion of
+              opportunity youth without college experience had increased in comparison to those with some college
+              experience, suggesting that previous opportunity youth were able to find employment because of their
+              college experience.
             </p>
           </div>
           <div class="resume-date text-md-right">
             <a href="jupyter_notebooks/OYnotebook.html" class="text-primary">View Jupyter Notebook</a>
           </div>
         </div>
-
-      </div>
-
     </section>
-
   </div>
 
   <!-- Bootstrap core JavaScript -->
